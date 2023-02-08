@@ -7,7 +7,7 @@ from .utils import generate_user_account_number
 
 
 class UserCreationSerializer(serializers.ModelSerializer):
-    name = serializers.CharField(max_length=30)
+    username = serializers.CharField(max_length=30)
     email = serializers.EmailField(max_length=90)
     account_balance= serializers.HiddenField(default=0)
     password=serializers.CharField(allow_blank=False,write_only=True)
@@ -15,7 +15,7 @@ class UserCreationSerializer(serializers.ModelSerializer):
 
     class Meta:
         model=Users
-        fields = ['id' ,'name', 'email', 'password', 'account_balance', 'account_number']
+        fields = ['id' ,'username', 'email', 'password', 'account_balance', 'account_number']
 
     def validate(self, attrs): 
         

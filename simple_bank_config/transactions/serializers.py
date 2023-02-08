@@ -8,4 +8,4 @@ class WithdrawalSerializers(serializers.Serializer):
 
 class TransferSerializers(serializers.Serializer):
     transfer_amount = serializers.DecimalField(max_digits=10, decimal_places=2)
-    destination_account= serializers.DecimalField(max_digits=6, decimal_places=2)
+    destination_account= serializers.DecimalField(max_digits=6, decimal_places=0)

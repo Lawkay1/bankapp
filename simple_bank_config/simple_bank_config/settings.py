@@ -39,7 +39,8 @@ INSTALLED_APPS = [
 
     #internal-apps 
     'transactions.apps.TransactionsConfig',
-    'users.apps.UsersConfig',
+    #'users.apps.UsersConfig',
+    'accounts.apps.AccountsConfig',
 
     #thirdparty
     'rest_framework',
@@ -99,7 +100,7 @@ DATABASES = {
     }
 }
 
-AUTH_USER_MODEL = 'users.Users'
+AUTH_USER_MODEL = 'accounts.Users'
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
